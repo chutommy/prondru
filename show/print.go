@@ -35,7 +35,7 @@ func PrintResponse(r *data.Response) {
 
 	// Subjects: {subjects}
 	b.Printf("Subjects: ")
-	fmt.Printf("%s\n", join(r.Subjects))
+	fmt.Printf("%s\n", low(join(r.Subjects)))
 
 	// Date: {publication data} ({url})
 	b.Printf("Date: ")
@@ -57,4 +57,9 @@ func join(ss []string) string {
 	}
 
 	return strings.Join(ss, ", ")
+}
+
+// low returnes the given string in lower-case.
+func low(s string) string {
+	return strings.ToLower(s)
 }
