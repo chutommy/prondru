@@ -34,3 +34,13 @@ func toResponses(inp io.Reader) (Responses, error) {
 
 	return responses, nil
 }
+
+// ToStrings returns slice of titles of the Responses.
+func (rr Responses) ToStrings() []string {
+	titles := make([]string, len(rr))
+	for i, r := range rr {
+		titles[i] = r.Title
+	}
+
+	return titles
+}
