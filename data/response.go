@@ -1,15 +1,5 @@
 package data
 
-// Request represents a search query configuration.
-type Request struct {
-	id     string
-	query  string
-	author string
-	title  string
-	rows   int
-	page   int
-}
-
 // Response represents a search result.
 type Response struct {
 	Id                 string   `json:"osti_id"`
