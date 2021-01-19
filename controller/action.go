@@ -1,13 +1,14 @@
 package controller
 
 import (
+	"bufio"
 	"fmt"
 	"github.com/urfave/cli/v2"
+	"os"
 	"prondru/api"
 	"prondru/data"
 	"prondru/handler"
 	"prondru/show"
-	"time"
 )
 
 // action defines the process of the CLI.
@@ -32,6 +33,8 @@ func action(c *cli.Context) error {
 
 // cycle: prompt user -> fetch data -> let user select -> printout the selection.
 func cycle(h *handler.Handler) error {
+	fmt.Println("++++++++++++++++")
+
 	// prompt
 	r, err := h.Prompt()
 	if err != nil {
@@ -42,6 +45,14 @@ func cycle(h *handler.Handler) error {
 	rr, err := data.Fetch(h.URL(), r)
 	if err != nil {
 		return err
+	}
+
+	if len(rr) == 0 {
+		fmt.Println()
+		fmt.Println("It looks like there aren't many great articles for your search...")
+		fmt.Println("Try something else :)")
+
+		return nil
 	}
 
 	// select
@@ -55,8 +66,8 @@ func cycle(h *handler.Handler) error {
 
 	// wait
 	fmt.Printf("Press enter to continue...\n")
-	time.Sleep(250 * time.Millisecond)
-	fmt.Scanln()
+	bufio.NewReader(os.Stdin).ReadByte() // wait enter
+	fmt.Println()
 
 	return nil
 }
