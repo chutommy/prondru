@@ -8,7 +8,7 @@ import (
 
 // Response represents a search result.
 type Response struct {
-	Id                 string   `json:"osti_id"`
+	ID                 string   `json:"osti_id"`
 	Title              string   `json:"title"`
 	Authors            []string `json:"authors"`
 	Subjects           []string `json:"subjects"`
