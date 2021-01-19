@@ -9,7 +9,7 @@ import (
 
 // Fetch makes a request based on the given Request and
 // returns Responses.
-func Fetch(u string, r *Request) (*Responses, error) {
+func Fetch(u string, r *Request) (Responses, error) {
 	// get a url
 	newURL := getURL(u, r)
 
@@ -25,7 +25,7 @@ func Fetch(u string, r *Request) (*Responses, error) {
 	}()
 
 	// decode
-	responses, err := ToResponses(resp.Body)
+	responses, err := toResponses(resp.Body)
 	if err != nil {
 		return nil, fmt.Errorf("could not unparse response's body content: %w", err)
 	}

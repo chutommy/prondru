@@ -22,8 +22,8 @@ type Response struct {
 // Responses represents a list of Response.
 type Responses []*Response
 
-// ToResponses decodes the io.Reader into Responses.
-func ToResponses(inp io.Reader) (*Responses, error) {
+// toResponses decodes the io.Reader into Responses.
+func toResponses(inp io.Reader) (Responses, error) {
 	var responses Responses
 
 	// decode
@@ -32,5 +32,5 @@ func ToResponses(inp io.Reader) (*Responses, error) {
 		return nil, fmt.Errorf("failed to decode response: %w", err)
 	}
 
-	return &responses, nil
+	return responses, nil
 }
