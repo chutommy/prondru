@@ -37,7 +37,7 @@ var flags = []cli.Flag{
 	},
 	&cli.BoolFlag{
 		Name:        titleFlag,
-		Aliases:     []string{"i"},
+		Aliases:     []string{"t"},
 		Usage:       "make Title field required",
 		Value:       false,
 		DefaultText: "false",
@@ -45,7 +45,7 @@ var flags = []cli.Flag{
 	&cli.IntFlag{
 		Name:        resultsFlag,
 		Aliases:     []string{"r"},
-		Usage:       "max number of results",
+		Usage:       "`MAX` number of results",
 		Value:       60,
 		DefaultText: "60",
 	},
