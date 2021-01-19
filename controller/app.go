@@ -12,31 +12,38 @@ var author = &cli.Author{
 	Email: "tommychu2256@gmail.com",
 }
 
+var (
+	idFlag      = "id"
+	authorFlag  = "author"
+	titleFlag   = "flag"
+	resultsFlag = "results"
+)
+
 // flags defines CLI's flags.
 var flags = []cli.Flag{
 	&cli.BoolFlag{
-		Name:        "id",
+		Name:        idFlag,
 		Aliases:     []string{"i"},
 		Usage:       "make ID field required",
 		Value:       false,
 		DefaultText: "false",
 	},
 	&cli.BoolFlag{
-		Name:        "author",
+		Name:        authorFlag,
 		Aliases:     []string{"a"},
 		Usage:       "make Author field required",
 		Value:       false,
 		DefaultText: "false",
 	},
 	&cli.BoolFlag{
-		Name:        "title",
+		Name:        titleFlag,
 		Aliases:     []string{"i"},
 		Usage:       "make Title field required",
 		Value:       false,
 		DefaultText: "false",
 	},
 	&cli.IntFlag{
-		Name:        "results",
+		Name:        resultsFlag,
 		Aliases:     []string{"r"},
 		Usage:       "max number of results",
 		Value:       60,
