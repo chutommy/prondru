@@ -2,4 +2,7 @@ module prondru
 
 go 1.15
 
-require github.com/manifoldco/promptui v0.8.0
+require (
+	github.com/fatih/color v1.10.0
+	github.com/manifoldco/promptui v0.8.0
+)
