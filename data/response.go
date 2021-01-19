@@ -1,5 +1,11 @@
 package data
 
+import (
+	"encoding/json"
+	"fmt"
+	"io"
+)
+
 // Response represents a search result.
 type Response struct {
 	Id                 string   `json:"osti_id"`
@@ -13,5 +19,18 @@ type Response struct {
 	PublicationDate    string   `json:"publication_date"`
 }
 
-// Results represents a list of Response.
-type Results []*Response
+// Responses represents a list of Response.
+type Responses []*Response
+
+// ToResponses decodes the io.Reader into Responses.
+func ToResponses(inp io.Reader) (*Responses, error) {
+	var responses Responses
+
+	// decode
+	err := json.NewDecoder(inp).Decode(&responses)
+	if err != nil {
+		return nil, fmt.Errorf("failed to decode response: %w", err)
+	}
+
+	return &responses, nil
+}
