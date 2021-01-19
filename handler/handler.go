@@ -6,12 +6,16 @@ import (
 
 // Handler handles user communication.
 type Handler struct {
-	cfg *Config
+	apiURL string
+	cfg    *Config
 }
 
 // NewHandler is a constructor for the Handler struct.
-func NewHandler(cfg *Config) *Handler {
-	return &Handler{cfg: cfg}
+func NewHandler(u string, cfg *Config) *Handler {
+	return &Handler{
+		apiURL: u,
+		cfg:    cfg,
+	}
 }
 
 // Prompt prompts the user based on the Handler's Config.
@@ -51,4 +55,9 @@ func (h *Handler) Prompt() (*data.Request, error) {
 // Select prompts user to select one of the Responses.
 func (h *Handler) Select(rr data.Responses) (*data.Response, error) {
 	return selectRecord(rr)
+}
+
+// URL returns apiURL.
+func (h *Handler) URL() string {
+	return h.apiURL
 }
