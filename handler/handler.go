@@ -47,3 +47,8 @@ func (h *Handler) Prompt() (*data.Request, error) {
 	// construct a new request
 	return data.NewRequest(id, query, author, title, h.cfg.rows, h.cfg.page), nil
 }
+
+// Select prompts user to select one of the Responses.
+func (h *Handler) Select(rr data.Responses) (*data.Response, error) {
+	return selectRecord(rr)
+}
