@@ -58,7 +58,7 @@ func join(ss []string) string {
 	return strings.Join(ss, ", ")
 }
 
-// low returnes the given string in lower-case.
+// low returns the given string in lower-case.
 func low(s string) string {
 	return strings.ToLower(s)
 }
