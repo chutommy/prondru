@@ -46,7 +46,7 @@ func notEmpty(input string) error {
 // The empty string is also OK.
 func minFourOrNone(input string) error {
 	l := len(input)
-	if l < 4 && l > 32 && input != "" {
+	if (l < 4 || l > 32) && input != "" {
 		return errTooShort
 	}
 
