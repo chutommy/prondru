@@ -2,6 +2,7 @@ package controller
 
 import (
 	"bufio"
+	"bytes"
 	"fmt"
 	"os"
 	"prondru/api"
@@ -9,6 +10,9 @@ import (
 	"prondru/handler"
 	"prondru/show"
 
+	"github.com/dimiro1/banner"
+	_ "github.com/dimiro1/banner/autoload" // load banner
+	"github.com/mattn/go-colorable"
 	"github.com/urfave/cli/v2"
 )
 
@@ -23,6 +27,10 @@ func action(c *cli.Context) error {
 	// get configuration and construct handler
 	cfg := handler.NewConfig(byID, byAuthor, byTitle, rows)
 	h := handler.NewHandler(api.URL, cfg)
+
+	// print banner
+	banner.Init(colorable.NewColorableStdout(), true, false, bytes.NewBufferString(show.Banner()))
+	fmt.Println()
 
 	// do cycle
 	for {
