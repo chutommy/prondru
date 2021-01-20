@@ -26,25 +26,25 @@ func (h *Handler) Prompt() (*data.Request, error) {
 
 	// query optional fields
 
-	if id, err = promptField("ID", h.cfg.byID); err != nil {
-		return nil, err
-	}
+	// if id, err = promptField("ID", h.cfg.byID); err != nil {
+	// 	return nil, err
+	// }
 
-	if author, err = promptField("Author", h.cfg.byAuthor); err != nil {
-		return nil, err
-	}
+	// if author, err = promptField("Author", h.cfg.byAuthor); err != nil {
+	// 	return nil, err
+	// }
 
-	if title, err = promptField("Title", h.cfg.byTitle); err != nil {
-		return nil, err
-	}
+	// if title, err = promptField("Title", h.cfg.byTitle); err != nil {
+	// 	return nil, err
+	// }
 
 	// decide if query is mandatory
-	b := true
-	if h.cfg.byID || h.cfg.byAuthor || h.cfg.byTitle {
-		b = false
-	}
+	// b := true
+	// if h.cfg.byID || h.cfg.byAuthor || h.cfg.byTitle {
+	// 	b = false
+	// }
 
-	if query, err = promptField("Keyword", b); err != nil {
+	if query, err = promptField("Keyword", true); err != nil {
 		return nil, err
 	}
 
