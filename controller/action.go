@@ -67,7 +67,9 @@ func cycle(h *handler.Handler) error {
 
 	// wait
 	fmt.Printf("Press enter to continue...\n")
-	_, _ = bufio.NewReader(os.Stdin).ReadByte() // wait enter
+
+	_, _ = bufio.NewReader(os.Stdin).ReadByte()
+
 	fmt.Println()
 
 	return nil
