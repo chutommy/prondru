@@ -46,8 +46,8 @@ var flags = []cli.Flag{
 		Name:        resultsFlag,
 		Aliases:     []string{"r"},
 		Usage:       "`MAX` number of results",
-		Value:       60,
-		DefaultText: "60",
+		Value:       100,
+		DefaultText: "100",
 	},
 }
 
