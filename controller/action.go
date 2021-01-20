@@ -39,13 +39,13 @@ func cycle(h *handler.Handler) error {
 	// prompt
 	r, err := h.Prompt()
 	if err != nil {
-		return err
+		return fmt.Errorf("could not retrieve prompt input: %w", err)
 	}
 
 	// fetch
 	rr, err := data.Fetch(h.URL(), r)
 	if err != nil {
-		return err
+		return fmt.Errorf("could not fetch url: %w", err)
 	}
 
 	if len(rr) == 0 {
@@ -59,7 +59,7 @@ func cycle(h *handler.Handler) error {
 	// select
 	resp, err := h.Select(rr)
 	if err != nil {
-		return err
+		return fmt.Errorf("could not get the selection: %w", err)
 	}
 
 	// print
@@ -67,7 +67,7 @@ func cycle(h *handler.Handler) error {
 
 	// wait
 	fmt.Printf("Press enter to continue...\n")
-	bufio.NewReader(os.Stdin).ReadByte() // wait enter
+	_, _ = bufio.NewReader(os.Stdin).ReadByte() // wait enter
 	fmt.Println()
 
 	return nil
