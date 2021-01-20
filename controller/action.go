@@ -3,12 +3,13 @@ package controller
 import (
 	"bufio"
 	"fmt"
-	"github.com/urfave/cli/v2"
 	"os"
 	"prondru/api"
 	"prondru/data"
 	"prondru/handler"
 	"prondru/show"
+
+	"github.com/urfave/cli/v2"
 )
 
 // action defines the process of the CLI.

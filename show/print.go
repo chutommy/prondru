@@ -2,9 +2,8 @@ package show
 
 import (
 	"fmt"
-	"strings"
-
 	"prondru/data"
+	"strings"
 
 	"github.com/fatih/color"
 )

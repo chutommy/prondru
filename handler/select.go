@@ -2,7 +2,6 @@ package handler
 
 import (
 	"fmt"
-
 	"prondru/data"
 
 	"github.com/manifoldco/promptui"
