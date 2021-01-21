@@ -1,4 +1,4 @@
-.PHONY: build-mac build-linux build-windows
+.PHONY: build-mac build-linux build-windows all clean
 
 build-mac:
 	GOOS=darwin GOARCH=amd64 go build -o prondru-mac main.go
