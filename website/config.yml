@@ -1,7 +1,7 @@
 baseURL: "https://chutommy.github.io/prondru/"
 enableInlineShortcodes: true
 languageCode: "en-us"
-title: "Prondru Project"
+title: "prOndru Project"
 theme: "uwe-uwe"
 relativeURLs: true
 
@@ -34,7 +34,7 @@ params:
 
     shortDesc:
       display: true
-      value: "The documentation of the project PrOndru, the CLI for the Office of Scientific and Technical Information API."
+      value: "The documentation of the project prOndru, the CLI for the Office of Scientific and Technical Information API."
 
     platformLinks:
       display: true

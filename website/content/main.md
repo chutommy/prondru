@@ -142,3 +142,7 @@ discontinuous behavior for an AdS brane in AdS space.</p>
 
 Press enter to continue...
 ```
+
+## License
+
+The project is under the MIT open source software license.
