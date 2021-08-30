@@ -1,0 +1,88 @@
+<!doctype html><html lang=en-us><head><meta name=generator content="Hugo 0.85.0"><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=author content="Tommy Chu"><meta name=description content="The documentation of the project prOndru, the CLI for the Office of Scientific and Technical Information API."><title>prOndru Project</title><link rel=icon type=image/png href=./assets/img/logo/favicon.png><script async src="https://www.googletagmanager.com/gtag/js?id=G-GNYV28RSRW"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','G-GNYV28RSRW')</script><link rel=stylesheet href=./assets/fonts/SourceSansPro/stylesheet.css><link rel=stylesheet href=./assets/css/styles.css></head><body><header id=page-header><div id=page-logo-wrapper><img id=page-logo alt="Uwe Uwe Logo" src=./assets/img/logo/logo.png width=150 height=150></div><h1 id=page-title>prOndru Project</h1><div id=page-short-desc>The documentation of the project prOndru, the CLI for the Office of Scientific and Technical Information API.</div><ul id=page-platform-links class=as-icons-and-text><li><a href=https://chutommy.github.io/ title="Go to author's website" target=_blank><img alt="author icon" src=./assets/img/platforms/personal.png width=36 height=36>
+<span>Author</span></a></li><li><a href=https://github.com/chutommy/observer title="Go to the Observer Github repository" target=_blank><img alt="source icon" src=./assets/img/platforms/github.png width=36 height=36>
+<span>Source</span></a></li><li><a href=https://www.osti.gov/ title="Go to the Office of Scientific and Technical Information official website" target=_blank><img alt="osti icon" src=./assets/img/platforms/document.png width=36 height=36>
+<span>OSTI</span></a></li></ul></header><main id=page-content><h2 id=installation>Installation</h2><h3 id=with-go>With Go</h3><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>$ go get github.com/chutommy/prondru
+</code></pre></div><h3 id=from-source>From source</h3><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>$ git clone https://github.com/chutommy/prondru.git
+</code></pre></div><p>The binary files are located in bin directory:</p><h4 id=linux-and-macos>Linux and MacOS</h4><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>$ ./prondru/bin/prondru
+</code></pre></div><h4 id=windows>Windows</h4><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>&gt; prondru<span style=color:#ae81ff>\b</span>in<span style=color:#ae81ff>\p</span>rondru.exe
+</code></pre></div><h2 id=usage>Usage</h2><h3 id=help>Help</h3><p>Run <code>prondru</code> with <code>--help</code> or <code>-h</code> flag:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>$ prondru --help
+Usage of prondru:
+  -ansi
+    	ansi colors enabled? <span style=color:#f92672>(</span>default true<span style=color:#f92672>)</span>
+  -banner string
+    	banner.txt file <span style=color:#f92672>(</span>default <span style=color:#e6db74>&#34;banner.txt&#34;</span><span style=color:#f92672>)</span>
+  -show-banner
+    	print the banner? <span style=color:#f92672>(</span>default true<span style=color:#f92672>)</span>
+</code></pre></div><h3 id=run>Run</h3><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>$ prondru
+--------------------------------------------------------------
+  ██████╗ ██████╗  ██████╗ ███╗   ██╗██████╗ ██████╗ ██╗   ██╗
+  ██╔══██╗██╔══██╗██╔═══██╗████╗  ██║██╔══██╗██╔══██╗██║   ██║
+  ██████╔╝██████╔╝██║   ██║██╔██╗ ██║██║  ██║██████╔╝██║   ██║
+  ██╔═══╝ ██╔══██╗██║   ██║██║╚██╗██║██║  ██║██╔══██╗██║   ██║
+  ██║     ██║  ██║╚██████╔╝██║ ╚████║██████╔╝██║  ██║╚██████╔╝
+  ╚═╝     ╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═══╝╚═════╝ ╚═╝  ╚═╝ ╚═════╝
+--------------------------------------------------------------
+   CLI <span style=color:#66d9ef>for</span> Office of Scientific and Technical Information API
+               https://www.osti.gov/api/v1/docs
+--------------------------------------------------------------
+                 Welcome to the prOndru v18.0!
+                            ---
+          Ondra<span style=color:#960050;background-color:#1e0010>&#39;</span>s terminal gateway to the fantastic
+               world of physical discoveries.
+                 ~ Wednesday, <span style=color:#ae81ff>20</span> Jan <span style=color:#ae81ff>2021</span>
+  
+         Copyright <span style=color:#f92672>(</span>c<span style=color:#f92672>)</span> <span style=color:#ae81ff>2021</span> Tommy Chu &amp; Ondrej Skrna
+               Licensed under the MIT license
+--------------------------------------------------------------
+Discover over <span style=color:#ae81ff>70</span> years of research results
+from <span style=color:#ae81ff>3</span> million scientific records
+provided by OSTI.
+++++++++++++++++
+✗ Keyword: █
+</code></pre></div><h3 id=discover>Discover</h3><p>Type a keyword (at least 4 characters):</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>✔ Keyword: Newton
+</code></pre></div><p>Use arrows to navigate:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>✔ Keyword: Newton
+Use the arrow keys to navigate: ↓ ↑ → ← 
+? Select article: 
+    Optimization and supervised machine learning methods <span style=color:#66d9ef>for</span> fitting numerical physics models without derivatives
+    Nonlinear convergence in contact mechanics: Immersed boundary finite volume
+    Oldroyd<span style=color:#960050;background-color:#1e0010>&#39;</span>s model and the foundation of modern rheology of yield stress fluids
+  ▸ Levenberg–Marquardt multi-classification using hinge loss <span style=color:#66d9ef>function</span>
+    Hydroxide melt induced corrosion of Ni at elevated temperatures under steam electrolysis conditions
+    Recent progress on neoclassical impurity transport in stellarators with implications <span style=color:#66d9ef>for</span> a stellarator reactor
+    Structural stability and artificial buckling modes in topology optimization
+    Heat transfer and pseudo phase transition <span style=color:#66d9ef>for</span> low-Reynolds, mixed-convection channel flow in the supercritical thermodynamic regime
+    de Sitter instanton from Euclidean dynamical triangulations
+↓   Flight directions of songbirds are unaffected by the topography of Lake Erie’s southern coastline during fall migration
+</code></pre></div><p>Use enter to discover articles:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>✔ Keyword: Newton█
+✔ Information transfer with a gravitating bath
+
+<span style=color:#f92672>================</span>
+Information transfer with a gravitating bath <span style=color:#f92672>[</span>OSTI: 1782949<span style=color:#f92672>]</span>
+Authors: Geng, Hao <span style=color:#f92672>[</span>University of Washington<span style=color:#f92672>]</span>, Karch, Andreas <span style=color:#f92672>[</span>The University of Texas at Austin, University of Washington<span style=color:#f92672>]</span>,
+Perez-Pardavila, Carlos <span style=color:#f92672>[</span>The University of Texas at Austin<span style=color:#f92672>]</span>, Raju, Suvrat <span style=color:#f92672>[</span>Tata Institute of Fundamental Research<span style=color:#f92672>]</span>, Randall,
+Lisa <span style=color:#f92672>[</span>Harvard University<span style=color:#f92672>]</span>, Riojas, Marcos <span style=color:#f92672>[</span>The University of Texas at Austin<span style=color:#f92672>]</span>, Shashi, Sanjit <span style=color:#f92672>[</span>The University of Texas at Austin<span style=color:#f92672>]</span>
+Publisher: Stichting SciPost - Netherlands
+Subjects: 
+Date: 2021-05-14T00:00:00Z <span style=color:#f92672>(</span>https://doi.org/10.21468/SciPostPhys.10.5.103<span style=color:#f92672>)</span>
+----------------
+Research
+
+Late-time dominance of entanglement islands plays a critical role in addressing
+the information paradox <span style=color:#66d9ef>for</span> black holes in AdS coupled to an asymptotic
+non-gravitational bath. A natural question is how this observation can be
+extended to gravitational systems. To gain insight into this question, we
+explore how this story is modified within the context of Karch-Randall
+braneworlds when we allow the asymptotic bath to couple to dynamical gravity.
+We find that because of the inability to separate degrees of freedom by spatial
+location when defining the radiation region, the entanglement entropy of
+radiation emitted into the bath is a time-independent constant, consistent with
+recent work on black hole information in asymptotically flat space. If we
+instead consider an entanglement entropy between two sectors of a specific
+division of the Hilbert space, we <span style=color:#66d9ef>then</span> find non-trivial time-dependence, with
+the Page time a monotonically decreasing <span style=color:#66d9ef>function</span> of the brane angle---provided
+both branes are below a particular angle. However, the properties of the entropy
+depend discontinuously on this angle, which is the first example of such
+discontinuous behavior <span style=color:#66d9ef>for</span> an AdS brane in AdS space.&lt;/p&gt;
+
+Press enter to <span style=color:#66d9ef>continue</span>...
+</code></pre></div><h2 id=license>License</h2><p>The project is under the MIT open source software license.</p></main><script src=./assets/js/uwe-uwe.js type=text/javascript></script><script type=text/javascript>UWE_UWE.FOOTNOTES.init(),UWE_UWE.TABS.init()</script></body></html>
