@@ -51,7 +51,7 @@ params:
         - name: "source"
           display: true
           iconSrc: "/assets/img/platforms/github.png"
-          target: "https://github.com/chutommy/observer"
+          target: "https://github.com/chutommy/prondru"
           text: "Source"
           title: "Go to the Observer Github repository"
 
