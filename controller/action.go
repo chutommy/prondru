@@ -4,11 +4,11 @@ import (
 	"bufio"
 	"bytes"
 	"fmt"
+	"github.com/chutommy/prondru/api"
+	"github.com/chutommy/prondru/data"
+	"github.com/chutommy/prondru/handler"
+	"github.com/chutommy/prondru/show"
 	"os"
-	"prondru/api"
-	"prondru/data"
-	"prondru/handler"
-	"prondru/show"
 
 	"github.com/dimiro1/banner"
 	_ "github.com/dimiro1/banner/autoload" // load banner

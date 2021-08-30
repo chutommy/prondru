@@ -2,7 +2,7 @@ package handler
 
 import (
 	"fmt"
-	"prondru/data"
+	"github.com/chutommy/prondru/data"
 
 	"github.com/manifoldco/promptui"
 )

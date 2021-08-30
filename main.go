@@ -1,9 +1,9 @@
 package main
 
 import (
+	"github.com/chutommy/prondru/controller"
 	"log"
 	"os"
-	"prondru/controller"
 )
 
 func main() {

@@ -2,7 +2,7 @@ package show
 
 import (
 	"fmt"
-	"prondru/data"
+	"github.com/chutommy/prondru/data"
 	"strings"
 
 	"github.com/fatih/color"

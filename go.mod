@@ -1,4 +1,4 @@
-module prondru
+module github.com/chutommy/prondru
 
 go 1.15
 

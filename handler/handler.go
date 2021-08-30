@@ -1,7 +1,7 @@
 package handler
 
 import (
-	"prondru/data"
+	"github.com/chutommy/prondru/data"
 )
 
 // Handler handles user communication.
