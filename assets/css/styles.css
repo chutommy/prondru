@@ -353,7 +353,7 @@ table td {
 #page-toc,
 #page-content {
     margin: 48px 24px 0px 24px;
-    max-width: 480px;
+    max-width: 1000px;
 }
 
 p > img {
@@ -367,7 +367,7 @@ p > img {
     #page-toc,
     #page-content {
         margin: 48px auto 0px auto;
-        width: 480px;
+        width: 1000px;
     }
 }
 
